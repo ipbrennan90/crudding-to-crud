@@ -1,0 +1,14 @@
+<%= form_for @dog do |d| %>
+
+<%= d.label :name %>
+<%= d.text_field :name %>
+
+<%= d.label :breed %>
+<%= d.text_field :breed %>
+
+<%= d.label :owner %>
+<%= d.text_field :owner %>
+
+<%= d.submit %>
+
+<% end %>

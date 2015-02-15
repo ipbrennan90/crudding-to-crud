@@ -1,4 +1,5 @@
 class DogsController <ApplicationController
+  before_action :set_dog, :only [:name, :breed, :owner]
   def index
     @dogs= Dog.all
   end
@@ -31,8 +32,7 @@ class DogsController <ApplicationController
   end
 
   def destroy
-    dog = Dog.find(params[:id])
-    dog.destroy
+    @dog.destroy
   end
 
   private

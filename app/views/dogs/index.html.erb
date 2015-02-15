@@ -1,0 +1,13 @@
+<h1> ALL DOGS </h1>
+
+<%= link_to "NEW DOG!", new_dog_path %>
+
+<%= dogs.each do |d| %>
+
+<%= link_to d.name, dog_path(@dog) %>
+<%= d.breed %>
+<%= d.owner %>
+<%= link_to "edit", edit_dog_path(@dog) %>
+<%= link_to "DESTROY DOG!", dog_path(@dog), method: :delete %>
+
+<% end %>
