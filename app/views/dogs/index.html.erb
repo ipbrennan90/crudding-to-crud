@@ -2,12 +2,12 @@
 
 <%= link_to "NEW DOG!", new_dog_path %>
 
-<%= dogs.each do |d| %>
+<% @dogs.each do |d| %>
 
-<%= link_to d.name, dog_path(@dog) %>
+<%= link_to d.name, dog_path(d) %>
 <%= d.breed %>
 <%= d.owner %>
-<%= link_to "edit", edit_dog_path(@dog) %>
-<%= link_to "DESTROY DOG!", dog_path(@dog), method: :delete %>
+<%= link_to "edit", edit_dog_path(d) %>
+<%= link_to "DESTROY DOG!", dog_path(d), method: :delete %>
 
 <% end %>
